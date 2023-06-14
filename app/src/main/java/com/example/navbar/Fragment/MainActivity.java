@@ -59,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setBackground(null);
         bottomNavigationView.setOnItemSelectedListener(item -> {
 
+
+            // ERRO AO DIRECIONAR OS ICOS DO MENU PARA OS FRAGMENTS CORRESPONDETES
             switch (item.getItemId()) {
                 case R.id.menu_home:
                     replaceFragment(new HomeFragment());
@@ -73,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new LibraryFragment());
                     break;
             }
-
             return true;
         });
 
