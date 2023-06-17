@@ -2,6 +2,7 @@ package com.example.navbar.Activity;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -73,22 +74,6 @@ public class MainActivity extends AppCompatActivity {
             } else if (item.getItemId() == R.id.menu_library) {
                 replaceFragment(new LibraryFragment());
             }
-            /*
-            // ERRO AO DIRECIONAR OS ICOS DO MENU PARA OS FRAGMENTS CORRESPONDETES
-            switch (item.getItemId()) {
-                case R.id.menu_home:
-                    replaceFragment(new HomeFragment());
-                    break;
-                case R.id.menu_shorts:
-                    replaceFragment(new ShortFragment());
-                    break;
-                case R.id.menu_subscriptions:
-                    replaceFragment(new SubscriptionFragment());
-                    break;
-                case R.id.menu_library:
-                    replaceFragment(new LibraryFragment());
-                    break;
-            }*/
             return true;
         });
 
@@ -98,6 +83,26 @@ public class MainActivity extends AppCompatActivity {
                 showBottomDialog();
             }
         });
+    }
+
+    private void redirecionarItem(int itemId) {
+        if (itemId == R.id.nav_home) {
+            // Redirecionar para a tela de Home
+            Intent intent = new Intent(this, LibraryFragment.class);
+            startActivity(intent);
+        } else if (itemId == R.id.nav_settings) {
+            // Redirecionar para a tela de Configurações
+            Intent intent = new Intent(this, LibraryFragment.class);
+            startActivity(intent);
+        } else if (itemId == R.id.nav_share) {
+            // Redirecionar para a tela de Compartilhamento
+            Intent intent = new Intent(this, LibraryFragment.class);
+            startActivity(intent);
+        } else if (itemId == R.id.nav_about) {
+            // Redirecionar para a tela de Sobre
+            Intent intent = new Intent(this, HomeFragment.class);
+            startActivity(intent);
+        }
     }
 
     //Outside onCreate
