@@ -85,26 +85,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void redirecionarItem(int itemId) {
-        if (itemId == R.id.nav_home) {
-            // Redirecionar para a tela de Home
-            Intent intent = new Intent(this, LibraryFragment.class);
-            startActivity(intent);
-        } else if (itemId == R.id.nav_settings) {
-            // Redirecionar para a tela de Configurações
-            Intent intent = new Intent(this, LibraryFragment.class);
-            startActivity(intent);
-        } else if (itemId == R.id.nav_share) {
-            // Redirecionar para a tela de Compartilhamento
-            Intent intent = new Intent(this, LibraryFragment.class);
-            startActivity(intent);
-        } else if (itemId == R.id.nav_about) {
-            // Redirecionar para a tela de Sobre
-            Intent intent = new Intent(this, HomeFragment.class);
-            startActivity(intent);
-        }
-    }
-
     //Outside onCreate
     private  void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
