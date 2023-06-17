@@ -60,6 +60,16 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(item -> {
 
 
+            if (item.getItemId() == R.id.menu_home) {
+                replaceFragment(new HomeFragment());
+            } else if (item.getItemId() == R.id.menu_shorts) {
+                replaceFragment(new ShortFragment());
+            } else if (item.getItemId() == R.id.menu_subscriptions) {
+                replaceFragment(new SubscriptionFragment());
+            } else if (item.getItemId() == R.id.menu_library) {
+                replaceFragment(new LibraryFragment());
+            }
+            /*
             // ERRO AO DIRECIONAR OS ICOS DO MENU PARA OS FRAGMENTS CORRESPONDETES
             switch (item.getItemId()) {
                 case R.id.menu_home:
@@ -74,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.menu_library:
                     replaceFragment(new LibraryFragment());
                     break;
-            }
+            }*/
             return true;
         });
 
